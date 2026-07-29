@@ -27,9 +27,7 @@ const CACHE_FILES = [
     "./javascript/api.js",
 
 
-    "./icons/icon-192.png",
-
-    "./icons/icon-512.png"
+    
 
 ];
 
