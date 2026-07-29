@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LifeExt - 즐겨찾기</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="theme-color" content="#4f7cff">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- 제목 -->
+    <header>
+
+        <h1>❤️ 즐겨찾기</h1>
+
+        <p class="subtitle">
+            저장한 명언들을 확인하세요.
+        </p>
+
+    </header>
+
+
+
+    <!-- 즐겨찾기 목록 -->
+
+    <section id="favoriteList" class="favorite-list">
+
+        <!-- favorite.js가 명언 카드를 생성하는 위치 -->
+
+    </section>
+
+
+
+    <!-- 버튼 -->
+
+    <section class="button-group">
+
+
+        <button id="deleteAllBtn">
+
+            🗑 전체 삭제
+
+        </button>
+
+
+        <button id="backBtn">
+
+            🏠 메인으로
+
+        </button>
+
+
+    </section>
+
+
+
+</div>
+
+
+
+<!-- JavaScript -->
+
+<script src="javascript/favorite.js"></script>
+
+
+
+<script>
+
+
+    // 메인 페이지 이동
+
+    document
+        .getElementById("backBtn")
+        .addEventListener("click", () => {
+
+            location.href = "index.html";
+
+        });
+
+
+</script>
+
+
+
+</body>
+
+</html>

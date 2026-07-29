@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LifeExt - 오늘의 명언</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="theme-color" content="#4f7cff">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- 제목 -->
+        <header>
+
+            <h1>🌞 LifeExt</h1>
+
+            <p class="subtitle">
+                오늘의 명언으로 하루를 시작하세요.
+            </p>
+
+        </header>
+
+        <!-- 검색 -->
+        <section class="search-section">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 인물 또는 명언 검색">
+
+        </section>
+
+        <!-- 카테고리 -->
+        <section class="category-section">
+
+            <button class="category-btn active-category" data-category="전체">
+                🌎 전체
+            </button>
+
+            <button class="category-btn" data-category="공부">
+                📚 공부
+            </button>
+
+            <button class="category-btn" data-category="성공">
+                🚀 성공
+            </button>
+
+            <button class="category-btn" data-category="리더십">
+                👑 리더십
+            </button>
+
+            <button class="category-btn" data-category="철학">
+                🧠 철학
+            </button>
+
+            <button class="category-btn" data-category="창업">
+                💼 창업
+            </button>
+
+            <button class="category-btn" data-category="인생">
+                ❤️ 인생
+            </button>
+
+        </section>
+
+        <!-- 오늘의 명언 -->
+        <section class="quote-box">
+
+            <p id="quote">
+                오늘의 명언이 여기에 표시됩니다.
+            </p>
+
+            <h3 id="author">
+                - 작성자
+            </h3>
+
+        </section>
+
+        <!-- 검색 결과 -->
+        <section id="searchResults">
+
+        </section>
+
+        <!-- 버튼 -->
+        <section class="button-group">
+
+            <button id="nextBtn">
+                🔄 다음 명언
+            </button>
+
+            <button id="favoriteBtn">
+                ❤️ 즐겨찾기
+            </button>
+
+            <button id="aiBtn">
+                🤖 AI 추천 명언
+            </button>
+
+            <button onclick="location.href='favorites.html'">
+                📖 즐겨찾기 목록
+            </button>
+
+        </section>
+
+    </div>
+
+    <!-- JavaScript -->
+
+    <script src="javascript/quotes.js"></script>
+
+    <script src="javascript/script.js"></script>
+
+    <script src="javascript/search.js"></script>
+
+    <script src="javascript/favorite.js"></script>
+
+    <script src="javascript/notification.js"></script>
+
+    <script src="javascript/api.js"></script>
+
+    <!-- Service Worker -->
+
+    <script>
+
+        if ("serviceWorker" in navigator) {
+
+            window.addEventListener("load", () => {
+
+                navigator.serviceWorker.register("service-worker.js")
+                    .then(() => {
+
+                        console.log("Service Worker 등록 완료");
+
+                    })
+                    .catch((error) => {
+
+                        console.log(error);
+
+                    });
+
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>
